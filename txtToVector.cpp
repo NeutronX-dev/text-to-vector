@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include "txtToVector.h"
 
-#define LOG(x) std::cout << x << std::endl
-
-std::vector<std::string> split(std::string text, char divider)
+std::vector<std::string> txtToVector::split(std::string text, char divider)
 {
     std::vector<std::string> response;
     std::vector<int> identifiers;
@@ -31,13 +30,4 @@ std::vector<std::string> split(std::string text, char divider)
     }
     
     return response;
-}
-
-int main()
-{
-    std::vector<std::string> x = split("Hello, I am a string!", ' ');
-    for (size_t i = 0; i < x.size(); i++)
-    {
-        std::cout << x[i] << std::endl;
-    }
 }
